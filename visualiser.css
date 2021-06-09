@@ -1,0 +1,40 @@
+.bar{
+
+    background-color: #8aff14;
+    float: left;
+    margin:0.5px;
+    overflow: hidden;
+}
+
+#win{
+    display:table;
+    margin:0 auto;
+    width: fit-content;
+ 
+}
+body {
+  min-height: 100%;
+  min-height: 100vh;
+}
+#btmnav{
+    background-color: #333;
+    position: fixed;
+    bottom :0;
+    width: 100%;
+    height: fit-content;
+    
+}
+#sortBtn{
+    margin: 5px; 
+}
+#arrsizechanger{
+    color: white;
+   padding-left: 20px;
+}
+#a1,#a2,#a3{
+    color: rgb(33, 33, 36);
+    margin-left: 3px;
+    margin-right: 3px;
+    border-radius: 3px;
+}
+ 

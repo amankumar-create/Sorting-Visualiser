@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="visualiser.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body >
+    <div id="win">
+    </div>
+
+    <div id="btmnav" class="navbar">
+        <button type="button" class="btn btn-primary" id="sortBtn">Sort</button>
+        <div class="dropup">
+            <button id="dropBtn" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Choose
+                Algorithm
+                <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <p id="a1" onmouseover="document.getElementById('a1').style.backgroundColor= 'rgb(133, 133, 138'"
+                    onmouseout="document.getElementById('a1').style.backgroundColor= 'white'">
+                    Bubble Sort</p>
+                <p id="a2" onmouseover="document.getElementById('a2').style.backgroundColor= 'rgb(133, 133, 138'"
+                    onmouseout="document.getElementById('a2').style.backgroundColor= 'white'">Merge Sort</p>
+                <p id="a3" onmouseover="document.getElementById('a3').style.backgroundColor= 'rgb(133, 133, 138'"
+                    onmouseout="document.getElementById('a3').style.backgroundColor= 'white'">Quick Sort</p>
+            </ul>
+        </div>
+        <div id="arrsizechanger">
+            <p>Change size of arrary</p>
+            <input type="range" id="slider" min="5" max="400" value="178">
+
+        </div>
+    </div>
+    
+    <script  src="prepare.js"></script>
+	    <script  src="visualiser.js"></script>
+    <script  src="bubblesort.js"></script>
+	<script  src="mergesort.js"></script>
+		<script  src="quicksort.js"></script>
+
+	
+</body>
+
+</html>
