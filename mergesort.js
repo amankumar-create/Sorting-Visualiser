@@ -1,17 +1,18 @@
-function mergeSort(s,e){
-	 c_delay =0;
-	 Sort(s, e);
+async function mergeSort(s,e){
+	 
+	 await Sort(s, e);
 }
-function  Sort(s, e) {
+async function  Sort(s, e) {
     if (s >= e) {
         return;
     }
     var m = Math.floor((s + e) / 2);
-     Sort(s, m);
-     Sort(m + 1, e);
-    merge(s, m, e);
+    await Sort(s, m);
+    await Sort(m + 1, e);
+    await merge(s, m, e);
 }
-function merge(s, m, e) {
+
+async function merge(s, m, e) {
     var la = [];
     var ra = [];
     var nu = [];
@@ -44,6 +45,7 @@ function merge(s, m, e) {
     }
     for (let q = 0; q < nu.length; ++q) {
         heights[s++] = nu[q] ;
-		update_height(arr[s-1],heights[s-1],2 );
+        await sleep(delay_time);
+		update_height(arr[s-1],heights[s-1] );
     }
 } 

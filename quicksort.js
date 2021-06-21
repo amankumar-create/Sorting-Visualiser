@@ -1,8 +1,12 @@
 
-function partition(left, right) {
+async function partition(left, right) {
     var pivot = heights[Math.floor((right + left) / 2)],
         i = left,
         j = right;
+     arr[i].style.backgroundColor = " #FF02F3"
+    arr[j].style.backgroundColor = "#FF02F3"   
+    arr[Math.floor((right + left) / 2)].style.backgroundColor= "#FF4343 ";
+    await sleep(delay_time);
     while (i <= j) {
         while (heights[i] < pivot) {
             i++;
@@ -10,39 +14,51 @@ function partition(left, right) {
         while (heights[j] > pivot) {
             j--;
         }
+        arr[i].style.backgroundColor = "#F3FF58"
+        arr[j].style.backgroundColor = "#F3FF58"
+        await sleep(delay_time);
         if (i <= j) {
 			var temp = heights[i];
 			heights[i] = heights[j];
 			heights[j] =temp;
-			update_height(arr[i],heights[i],2);
-			update_height(arr[j],heights[j],2);
-          
+
+			update_height(arr[i],heights[i] );
+			update_height(arr[j],heights[j] );
+            await sleep(delay_time);
+            arr[i].style.backgroundColor = "#06FFD0";
+            arr[j].style.backgroundColor = "#06FFD0";
             i++;
             j--;
         }
+        arr[i].style.backgroundColor = "#06FFD0";
+        arr[j].style.backgroundColor = "#06FFD0";
+        
     }
+     arr[i].style.backgroundColor = " #06FFD0"
+    arr[j].style.backgroundColor = "#06FFD0"  
+     arr[Math.floor((right + left) / 2)].style.backgroundColor= "#06FFD0 ";
     return i;
 }
 
 
 
-function quicksort(l,r){
-	c_delay =0;
-	quickSort(l,r);
+async function quicksort(l,r){
+	 
+	await quickSort(l,r);
 }
 
 
 
-function quickSort(left, right) {
+async function quickSort(left, right) {
 	
     if (left == right) return;
 
-    var index = partition(left, right);
+    var index = await partition(left, right);
     if (left < index - 1) {
-        quickSort(left, index - 1);
+        await quickSort(left, index - 1);
     }
     if (index < right) {
-        quickSort(index, right);
+        await quickSort(index, right);
     }
 
 }

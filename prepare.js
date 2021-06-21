@@ -62,6 +62,7 @@ function resetArr(n) {
 
     }
 }
+var delay_time =100;
 //choosing algorithm for sorting-------------------------------------------------------------
 var algo = 1;
 algo1.addEventListener("click", function () {
