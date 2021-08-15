@@ -15,21 +15,21 @@ async function bubbleSort() {
             arr[j+1].style.backgroundColor = "#F3FF58 ";
 
             if (heights[j] > heights[j + 1]) {
-                await sleep(2);
+                await sleep(delay_time);
                 var temp = heights[j];
                 heights[j] = heights[j + 1];
                 heights[j + 1] = temp;
                 
                 update_height(arr[j], heights[j]);
                 update_height(arr[j + 1], heights[j + 1]);
-                await sleep(2);
+                await sleep(delay_time);
 
             }
-            arr[j].style.backgroundColor = "#8aff14 ";
-            arr[j+1].style.backgroundColor = "#8aff14 ";
+            arr[j].style.backgroundColor = "#06FFD0  ";
+            arr[j+1].style.backgroundColor = "#06FFD0 ";
            
         }
-          
+        arr[n-1-i].style.backgroundColor = "#1aff00";  
     }
-   
+   arr[0].style.backgroundColor = "#1aff00";
 }

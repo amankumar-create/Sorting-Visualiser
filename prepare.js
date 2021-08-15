@@ -3,6 +3,7 @@
 
 var win = document.getElementById("win");
 var sl = document.getElementById("slider");
+var sl2 = document.getElementById("slider2")
 var sortBtn = document.getElementById('sortBtn');
 var dropBtn = document.getElementById('dropBtn');
 var algo1 = document.getElementById('a1');
@@ -13,6 +14,7 @@ document.body.style.backgroundColor =  "black";
 //getting size of array from slider and then adjusting the width of bars accordingly----------------------------------------------------------------------------
 
 var n = sl.defaultValue;
+var sp_factor = sl2.defaultValue;
 var winWidth = screen.width - 100;
 var w = (winWidth - 4 * n) / n;
 var arr = [];
@@ -30,6 +32,11 @@ sl.addEventListener("input", function () {
     // console.log(winWidth);
     // console.log(n);
     // console.log(w);  
+});
+var delay_time =10;
+sl2.addEventListener("input",function(){
+    sp_factor = sl2.value;
+    delay_time = 100*100/(sp_factor*sp_factor);
 });
 
 //resetting the array -------------------------------------------------------------------------------------------------------------
@@ -62,7 +69,7 @@ function resetArr(n) {
 
     }
 }
-var delay_time =100;
+
 //choosing algorithm for sorting-------------------------------------------------------------
 var algo = 1;
 algo1.addEventListener("click", function () {
